@@ -1,0 +1,11 @@
+[Unit]
+Description=Bsvalias / Paymail server
+After=network.target
+
+[Service]
+User=www-data
+ExecStart=/var/lib/bsvalias/paymail --config=/etc/bsvalias/config.toml
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

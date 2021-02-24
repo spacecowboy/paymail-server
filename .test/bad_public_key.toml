@@ -1,0 +1,15 @@
+[server]
+host = "domain.tld"
+
+[bsv.capabilities]
+sender_validation = true
+verify_public_key_owner = true
+
+[[bsv.accounts]]
+address = "address1"
+payment_destination = "1N5WoeWXtf1iAKdAAdkZouxataAKfuGmm5"
+public_key = "pki1" 
+public_keys = [
+    "pub11",
+    "pub12"
+]

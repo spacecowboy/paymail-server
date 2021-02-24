@@ -1,0 +1,22 @@
+[server]
+host = "domain.tld"
+
+[bsv.capabilities]
+sender_validation = true
+verify_public_key_owner = true
+
+[[bsv.accounts]]
+# Private address: L1Wn4XsMijiVJwR8vPjQKGqudx8KAe57rVpZq1JuTRSd32odurD1
+address = "bob@domain.tld"
+payment_destination = "13WLwvqzGNcc14DVssidThWsfTaejZXr6r"
+public_key = "038EA552AB83AD27BDDB42CA9B81E1597DD0BF2B9E24C567A7A6366B698F67F0AA" 
+public_keys = [
+    "038EA552AB83AD27BDDB42CA9B81E1597DD0BF2B9E24C567A7A6366B698F67F0AA",
+    "03AB9E665A4035A6C8B37C028C0331FB808445034172FB95E2B13FC0EB6B71AE9E"
+]
+
+[[bsv.accounts]]
+# Private address: Kwy7rtarmdb1h48n9WnFYs8wj44Qa3bGoDPKW84N4LXVpMb2FeWh
+address = "alice@domain.tld"
+payment_destination = "1N5WoeWXtf1iAKdAAdkZouxataAKfuGmm5"
+public_key = "03AB9E665A4035A6C8B37C028C0331FB808445034172FB95E2B13FC0EB6B71AE9E"
