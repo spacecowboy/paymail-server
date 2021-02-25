@@ -1,0 +1,29 @@
+[server]
+## The full host to your paymail server
+host = "sub.domain.tld"
+## Default values for listen address below
+# listen_address = "localhost:26245"
+
+[bsv.capabilities]
+## Default value is true - means queries can be made if an account is associated
+## with a certain public key (see also public_key(s) fields under account)
+# verify_public_key_owner = true
+
+## Atleast 1 account is required
+[[bsv.accounts]]
+## Private address: L1Wn4XsMijiVJwR8vPjQKGqudx8KAe57rVpZq1JuTRSd32odurD1
+## The paymail address for this account - required field
+address = "alias@domain.tld"
+## Compressed address where payments should be made - required field
+payment_destination = "<PAYMENT_ADDRESS>"
+## Primary public key for the account in 66 hexadecimal characters - required field
+## (should NOT be related to the payment address)
+public_key = "<PUBLIC_KEY_IN_66_HEXADECIMAL_CHARACTERS>"
+## Additional public addresses can be added here in case of key rotation and such
+# public_keys = []
+
+## Multiple accounts can be added
+# [[bsv.accounts]]
+# address = "alias2@domain.tld"
+# payment_destination = "<PAYMENT_ADDRESS>"
+# public_key = "<PUBLIC_KEY_IN_66_HEXADECIMAL_CHARACTERS>"

@@ -10,7 +10,7 @@ import (
 
 	"github.com/go-chi/chi"
 	"github.com/libsv/go-bt/bscript"
-	"nononsenseapps.com/paymail/config"
+	"gitlab.com/spacecowboy/paymail-server/config"
 )
 
 

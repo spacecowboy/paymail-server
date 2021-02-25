@@ -1,3 +1,6 @@
+# Put in /etc/nginx/conf.d/
+# or where your nginx server config is
+
 location ^~ /.well-known/bsvalias {
     proxy_pass http://localhost:26245;
     proxy_set_header X-Real-IP $remote_addr;

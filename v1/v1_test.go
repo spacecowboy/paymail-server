@@ -2,7 +2,7 @@ package v1
 
 import (
 	"testing"
-	"nononsenseapps.com/paymail/config"
+	"gitlab.com/spacecowboy/paymail-server/config"
 )
 
 func TestWellKnownNoHost(t *testing.T) {

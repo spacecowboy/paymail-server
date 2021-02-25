@@ -1,10 +1,12 @@
 package main
 
-import "net/http"
-import "log"
-import "nononsenseapps.com/paymail/v1"
-import "nononsenseapps.com/paymail/config"
-import "flag"
+import (
+	"flag"
+	"gitlab.com/spacecowboy/paymail-server/config"
+	"gitlab.com/spacecowboy/paymail-server/v1"
+	"log"
+	"net/http"
+)
 
 func main() {
 	configPath := flag.String("config", "config.toml", "path to config file")

@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 User=www-data
-ExecStart=/var/lib/bsvalias/paymail --config=/etc/bsvalias/config.toml
+ExecStart=/var/lib/paymail/paymail-server --config=/etc/paymail/config.toml
 Restart=on-failure
 
 [Install]
