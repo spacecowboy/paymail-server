@@ -12,6 +12,7 @@ cache:
 stages:
   - build
   - test
+  - release
 
 unit_tests:
   stage: test
@@ -28,3 +29,15 @@ build_them:
       - paymail-server-linux-amd64
       - paymail-server-windows-amd64
       - paymail-server-darwin-amd64
+
+release_job:
+  stage: release
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  rules:
+    - if: $CI_COMMIT_TAG                  # Run this job when a tag is created manually
+  script:
+    - echo 'running release_job'
+  release:
+    description: 'Latest release'  # $EXTRA_DESCRIPTION must be defined
+    tag_name: '$CI_COMMIT_TAG'
+    ref: '$CI_COMMIT_TAG'
