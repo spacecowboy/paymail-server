@@ -1,0 +1,30 @@
+image: golang:1.16.0-buster
+
+cache:
+  paths:
+    - /apt-cache
+    - /go/src/gitlab.com
+    - /go/src/github.com
+    - /go/src/golang.org
+    - /go/src/google.golang.org
+    - /go/src/gopkg.in
+
+stages:
+  - build
+  - test
+
+unit_tests:
+  stage: test
+  script:
+    - go test -v ./...
+
+build_them:
+  stage: build
+  script:
+    - ./.build-all
+  artifacts:
+    name: "$CI_COMMIT_REF_NAME"
+    paths:
+      - paymail-server-linux-amd64
+      - paymail-server-windows-amd64
+      - paymail-server-darwin-amd64

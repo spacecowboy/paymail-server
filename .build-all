@@ -1,0 +1,8 @@
+#!/bin/bash -eu
+
+for GOOS in darwin linux windows; do
+   for GOARCH in amd64; do
+     export GOOS GOARCH
+     go build -v -o paymail-server-$GOOS-$GOARCH
+   done
+ done

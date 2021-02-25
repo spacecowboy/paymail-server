@@ -7,7 +7,7 @@ import (
 
 func TestWellKnownNoHost(t *testing.T) {
 	config := config.Config {}
-	_, err := getWellKnownBsvAliasResponse(&config)
+	_, err := GetWellKnownBsvAliasResponse(&config)
 	
 	if err == nil {
 		t.Fatalf("Expected error but got no error")
@@ -123,7 +123,7 @@ func TestVerify(t *testing.T) {
 		t.Fatalf("Got error %s", err)
 	}
 
-	expected := `{"bsvalias":"1.0","handle":"bob@example.org","pubkey":"pkiaddress"}`
+	expected := `{"handle":"bob@example.org","pubkey":"pubkey","match":false}`
 
 	if string(js) != expected {
 		t.Errorf("Expected %s\n but got %s", expected, string(js))
@@ -135,7 +135,7 @@ func TestVerify(t *testing.T) {
 		t.Fatalf("Got error %s", err)
 	}
 
-	expected = `{"bsvalias":"1.0","handle":"bob@example.org","pubkey":"pkiaddress"}`
+	expected = `{"handle":"bob@example.org","pubkey":"pubkey","match":true}`
 
 	if string(js) != expected {
 		t.Errorf("Expected %s\n but got %s", expected, string(js))
